@@ -9,8 +9,9 @@ request({url , json : true}, (error, {body}) => {
     } else if(body.error) {
         callback(body.error.info,undefined);
     } else {
-        
-        callback(undefined,body.current.weather_descriptions[0]+' The temperature is '+body.current.temperature+' but it feels like '+body.current.feelslike);
+        console.log(body);
+        callback(undefined,body.current.weather_descriptions[0]+' The temperature is '+body.current.temperature+' but it feels like '+body.current.feelslike +
+        ' with humidity '+body.current.humidity);
     }
 
 })

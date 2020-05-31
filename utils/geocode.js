@@ -14,7 +14,7 @@ const geocode = (address,callback) => {
                 Longitude :    body.features[0].center[0],
                 Location :     body.features[0].place_name
             });
-            console.log('forestr',forestr)
+           
         }
     })
 }
